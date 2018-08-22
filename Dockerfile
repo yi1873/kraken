@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y curl build-essential git zlib1g-dev wge
     ldconfig /usr/local/lib/* && \
     cd /tmp && git clone https://github.com/fbreitwieser/krakenhll && cd krakenhll && \
     ./install_krakenhll.sh /kraken && cd /tmp/kraken && ./install_kraken.sh /kraken && \
-    git clone https://github.com/yi1873/Krona.git && \
+    cd /kraken && git clone https://github.com/marbl/Krona.git && \
+    hg clone https://bitbucket.org/biobakery/metaphlan2 && \
     rm -rf /tmp/*
 
 ENV PATH /kraken:$PATH
