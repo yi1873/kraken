@@ -20,7 +20,7 @@ docker run --rm -v /path:/path lxz/kraken:1.0 \
 # convert kraken report to krona format
 
 docker run --rm -v /path:/path lxz/kraken:1.0 \
-    /metaphlan2/utils/metaphlan2krona.py \
+    /kraken/metaphlan2/utils/metaphlan2krona.py \
     -p /path/test.kraken.mpa.txt -k /path/test.krona.out
 
 # krona html display
